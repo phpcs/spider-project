@@ -38,7 +38,7 @@ class Db(object):
         cursor = self._con.cursor()
         cursor.execute("USE tiku_spider")
         try:
-            sql = "SELECT id,url FROM koolearn_chapter limit 1"
+            sql = "SELECT id,url FROM koolearn_chapter"
             cursor.execute(sql)
             results = cursor.fetchall()
             return results
